@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{ isPalindrome("abcc ba");
+return 0;}
+  
+// A function to check if a string str is a palindrome
+void isPalindrome(char str1[])
+{
+    int l = 0,i=0,j=0;
+    char str[1000];
+   
+    
+    while(str1[i]!='\0')
+    {
+        if(str1[i]!=' ')
+        {
+            str[j]=str1[i];
+            j++; 
+        }
+        i++;
+        
+    }str[j]='\0';
+     int h = strlen(str) - 1;
+    while (h > l)
+    {
+        
+        if (tolower(str[l++]) != tolower(str[h--]))
+        {
+            printf("%s is Not Palindrome", str1);
+            return;
+        }
+
+    }
+    printf("%s is palindrome", str1);
+}
