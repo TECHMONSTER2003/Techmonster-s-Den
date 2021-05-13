@@ -1,0 +1,45 @@
+#include<stdio.h>
+int main ()
+{
+  int a[10][10], b[10][10], i, j, m, n;
+  printf ("\nEnter the row and column of matrix");
+  scanf ("%d %d", &m, &n);
+  printf ("\nEnter the matrix->");
+  for (i = 0; i < m; i++)
+    {
+      for (j = 0; j < n; j++)
+	{
+	  scanf ("%d", &a[i][j]);
+	}
+    }
+  printf ("\nThe matrix is\n");
+  for (i = 0; i < m; i++)
+    {
+      printf ("\n");
+      for (j = 0; j < n; j++)
+	{
+	  printf ("%d\t", a[i][j]);
+	}
+    }
+  for (i = 0; i < m; i++)//from this line to
+    for (j = 0; j < n; j++)
+      b[i][j] = 0; //this line initialising all the elements of the empty matrix 'b' to zero
+      //to avoid garbage values
+  for (i = 0; i <= m; i++)
+    {
+      for (j = 0; j < n; j++)
+	{
+	  b[i][j] = a[j][i];
+	}
+    }
+  printf ("\n\nTraspose of a matrix is -> ");
+  for (i = 0; i <=m; i++)
+    {
+      printf ("\n");
+      for (j = 0; j < m; j++)
+	{
+	  printf ("%d\t", b[i][j]);
+	}
+    }
+return 0;
+}
