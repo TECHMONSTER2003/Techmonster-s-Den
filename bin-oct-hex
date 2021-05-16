@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    int base;
+    unsigned long long int n;
+    int index = -1;
+    short bits [10000];
+    scanf("%llu %d",&n,& base);
+    while(n>0)
+    {
+        bits [++index]=n%base;
+        n/=base;
+    }
+    while(index >=0)
+    {
+        printf("%hi",bits[index--]);
+    }
+    return 0;
+}
+
