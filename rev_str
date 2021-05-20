@@ -1,6 +1,6 @@
 /
 #include <stdio.h>
-void reverseSentence ();
+void rev ();
 int
 main ()
 {
@@ -10,14 +10,14 @@ main ()
 }
 
 void
-reverseSentence ()
+rev ()
 {
 
   char c;
   scanf ("%c", &c);
   if (c != '\n')
     {
-      reverseSentence ();
+      rev ();
       printf ("%c", c);
     }
 }
